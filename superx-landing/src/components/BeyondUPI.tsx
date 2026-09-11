@@ -69,7 +69,10 @@ const BeyondUPI: React.FC = () => {
           <div className="glass rounded-3xl overflow-hidden shadow-2xl">
             <div className={`bg-gradient-to-r ${products[activeTab].gradient} p-8 text-white`}>
               <div className="flex items-center gap-4 mb-4">
-                <products[activeTab].icon size={40} />
+                {(() => {
+                  const IconComponent = products[activeTab].icon
+                  return <IconComponent size={40} />
+                })()}
                 <h3 className="text-3xl font-display font-bold">{products[activeTab].name}</h3>
               </div>
               <p className="text-xl opacity-90">{products[activeTab].tagline}</p>
