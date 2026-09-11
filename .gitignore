@@ -46,3 +46,4 @@ yarn-error.log*
 .mypy_cache/
 .pytest_cache/
 ```.next/
+.next/
